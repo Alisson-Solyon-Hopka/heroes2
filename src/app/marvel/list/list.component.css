@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grupCaracters {
+  position: relative;
+  width: 180px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #000; 
+  margin: 5px 5px 5px 5px;
+  padding-bottom: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.grupCaracters img {
+  width: 180px;
+  height: 180px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 3px solid #000;
+}
+
+.nameCaracter {
+  margin: 10px 10px 10px 10px;
+  color: #e21313;
+}
+
+.idCaracter {
+  color: #fff;
+  background-color: #696969;
+  padding: 3px 10px 3px 10px;
+  text-align: center;
+}
+
+.descriptionCaracter {
+  margin: 10px 10px 10px 10px;
+}
+
+.buttonDesc {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #000;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
