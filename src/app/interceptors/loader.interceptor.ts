@@ -14,7 +14,7 @@ export class LoaderInterceptor implements HttpInterceptor {
 
   constructor(public loaderService: LoaderService) { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log("Passou pelo Interseptor")
+    console.log("Passou pelo Interceptor")
     this.loaderService.isLoading.next(true);
     return next.handle(req).pipe(
       finalize(

@@ -17,7 +17,11 @@ export class DescriptionComponent implements OnInit {
   searchResult;
   listDescription: any = []
 
-  constructor(private route: ActivatedRoute, private caracter: CharactersApiService, public loaderService: LoaderService) {
+  constructor(
+              private route: ActivatedRoute,
+              private caracter: CharactersApiService,
+              public loaderService: LoaderService
+              ) {
 
     this.descriptionId = parseInt(this.route.snapshot.paramMap.get('id'))
 

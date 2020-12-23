@@ -14,7 +14,11 @@ export class ListComponent implements OnInit {
   ret;
   list: any = [];
 
-  constructor(private character: CharactersApiService, private router: Router, public loaderService: LoaderService) { }
+  constructor(
+              private character: CharactersApiService,
+              private router: Router,
+              public loaderService: LoaderService
+              ) { }
 
   ngOnInit() {
     this.character.getCaracters().subscribe(characters => {

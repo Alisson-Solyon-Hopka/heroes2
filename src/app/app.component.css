@@ -1,3 +1,10 @@
+.containerMenu {
+  width: 100%;
+  border: 10px solid #fff;
+  z-index: 100;
+  position: fixed;
+}
+
 .menu {
   position: fixed;
   width: 100%;
@@ -7,7 +14,7 @@
 
 ul {
     list-style-type: none;
-    margin: 10px 0 0 0;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #fff;
@@ -50,6 +57,7 @@ ul {
   .active {
     background-color: #EC0000;
     border-right: 10px solid #fff;
+    border-left: 10px solid #fff;
     color: #fff;
   }
 
