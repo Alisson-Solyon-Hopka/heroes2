@@ -1,7 +1,7 @@
 <mat-tab-group mat-stretch-tabs class="stretched-tabs mat-elevation-z4">
     <mat-tab label="Character">
         <h2>{{listDescription.name}}</h2>
-        <img class="imgCharacterDesc" src="{{listDescription.thumbnail.path}}.{{listDescription.thumbnail.extension}}"
+        <img class="imgCharacterDesc" src="{{listDescription?.thumbnail?.path}}.{{listDescription?.thumbnail?.extension}}"
             alt="Image of Heroes">
         <h3>{{listDescription.id}}</h3>
     </mat-tab>
@@ -16,24 +16,24 @@
     </mat-tab>
     <mat-tab label="Series">
         <div class="series">
-            <div class="series" *ngFor="let serie of listDescription.comics.items">{{serie.name}}</div>
+            <div class="series" *ngFor="let serie of listDescription?.comics?.items">{{serie.name}}</div>
         </div>
     </mat-tab>
 
     <mat-tab label="Events">
         <div class="events">
-            <div class="series" *ngFor="let serie of listDescription.events.items">{{serie.name}}</div>
+            <div class="series" *ngFor="let serie of listDescription?.events?.items">{{serie.name}}</div>
         </div>
-        <div class="descCaracterEmpty" *ngIf="listDescription.events.items == '' ">
+        <div class="descCaracterEmpty" *ngIf="listDescription?.events?.items == '' ">
             <h2>Este personagem não autorizou a dilvulgação de seus eventos</h2>
         </div>
     </mat-tab>
 
     <mat-tab label="Stories">
         <div class="stories">
-            <div class="series" *ngFor="let serie of listDescription.stories.items">{{serie.name}}</div>
+            <div class="series" *ngFor="let serie of listDescription?.stories?.items">{{serie.name}}</div>
         </div>
-        <div class="descCaracterEmpty" *ngIf="listDescription.stories.items == '' ">
+        <div class="descCaracterEmpty" *ngIf="listDescription?.stories?.items == '' ">
             <h2>Este personagem não autorizou a dilvulgação de seus stories</h2>
         </div>
     </mat-tab>

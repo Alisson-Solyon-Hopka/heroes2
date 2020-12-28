@@ -48,6 +48,14 @@ ul {
     font-weight: bold;
   }
 
+  .decorationEndRight {
+      background: #fff;
+      position: absolute;
+      width: 5px;
+      height: 20px;
+      right: 0px;
+  }
+
   
   li a:hover:not(.active) {
     background-color: #000;
