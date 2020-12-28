@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,10 @@ import { LoaderComponent } from './shared/loaders/loader/loader.component';
       provide: HTTP_INTERCEPTORS,
       useClass: LoaderInterceptor,
       multi: true
+    },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
     }
   ],
   bootstrap: [AppComponent]
