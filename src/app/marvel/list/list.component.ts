@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { LoaderService } from './../../shared/loaders/loader.service';
 import { CharactersApiService } from './character-api.service';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-list',
@@ -31,4 +32,13 @@ export class ListComponent implements OnInit {
   onDescription(caracter) {
     this.router.navigate(['/list', caracter.id]);
   }
+
+  handlePage(e: PageEvent) {
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
+  page_size: number = 5
+  page_number: number = 1
+  pageSizeOptions = [5, 10, 20, 50, 100]
 }

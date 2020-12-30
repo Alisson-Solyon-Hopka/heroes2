@@ -1,5 +1,5 @@
 <div class="container" style="width: 100%;">
-  <div class="grupCaracters" *ngFor="let caracter of list">
+  <div class="grupCaracters" *ngFor="let caracter of list | paginate:page_size:page_number">
     <section>
       <div class="imgCaracter">
         <img src="{{caracter.thumbnail.path}}.{{caracter.thumbnail.extension}}" alt="Image of Heroes">
@@ -12,5 +12,10 @@
         <button mat-button mat-elevation-z4 (click)="onDescription(caracter)">DESCRIPTION</button>
       </div>
     </section>
+  </div>
+  <div class="paginatorList">
+    <mat-paginator [length]="list.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+      (page)="handlePage($event)">
+    </mat-paginator>
   </div>
 </div>

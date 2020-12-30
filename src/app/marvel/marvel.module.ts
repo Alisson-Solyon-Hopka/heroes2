@@ -7,13 +7,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { DescriptionComponent } from './description/description.component';
+import { PaginatePipe } from '../pipes/paginate.pipe';
 
 @NgModule({
-  declarations: [HomeComponent, ListComponent, DescriptionComponent],
+  declarations: [HomeComponent, ListComponent, DescriptionComponent, PaginatePipe],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -22,7 +24,8 @@ import { DescriptionComponent } from './description/description.component';
     MatCardModule,
     MatTabsModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ],
   exports: [],
 })
